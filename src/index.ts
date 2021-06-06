@@ -2,6 +2,7 @@ import Stack from './Stack';
 import Queue from './Queue';
 import LinkedList from './LinkedList';
 import mergeSort from './MergeSort';
+import DoublyLinkedList from './DoublyLinkedList';
 
 // --------------------- LinkedList ------------
 console.log(" ------------- Linked List ---------------");
@@ -49,6 +50,21 @@ queue.printListData();
 queue.dequeue();
 queue.dequeue();
 queue.printListData();
+
+// ----------------- DoublyLinkedList -------------
+console.log(" ----------- DoublyCircularLinkedList ----------");
+let dll: DoublyLinkedList = new DoublyLinkedList();
+
+dll.insertFirst(4);
+dll.insertFirst(3);
+dll.insertFirst(2);
+dll.insertFirst(1);
+dll.insertLast(5);
+dll.removeFirst();
+dll.removeFirst();
+dll.printListDataFromFirst();
+// dll.printListDataFromLast();
+
 
 // ----------------- Merge Sort -------------------
 console.log(" ------------- MERGE SORT ---------------");
