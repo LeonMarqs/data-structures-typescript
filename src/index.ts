@@ -60,8 +60,9 @@ dll.insertFirst(3);
 dll.insertFirst(2);
 dll.insertFirst(1);
 dll.insertLast(5);
-dll.removeFirst();
-dll.removeFirst();
+// dll.removeFirst();
+// dll.removeFirst();
+dll.removeLast();
 dll.printListDataFromFirst();
 // dll.printListDataFromLast();
 

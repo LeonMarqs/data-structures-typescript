@@ -68,13 +68,31 @@ export default class DoublyLinkedList {
       return true;
     }
 
-
     let secondNode = this.head.next;
     let lastNode = this.head.previous;
     lastNode!.next = secondNode;
     secondNode!.previous = lastNode;
     this.head = secondNode;
 
+    this.size--;
+  }
+
+  removeLast() {
+    if(!this.head) {
+      return false;
+    }
+
+    if(this.size == 1) {
+      this.clearList();
+      return true;
+    }
+
+    let tail = this.head.previous;
+    let newLastNode = tail!.previous;
+
+    newLastNode!.next = this.head;
+    this.head.previous = newLastNode;
+    
     this.size--;
   }
 
